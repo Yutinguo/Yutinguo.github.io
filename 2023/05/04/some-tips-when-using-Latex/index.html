@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Tags"/>
+        <meta property="og:title" content="some tips when using Latex"/>
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Tags - Yuting&#39;s virtual home</title>
+    <title>some tips when using Latex - Yuting&#39;s virtual home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -159,59 +159,91 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-
-    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Tags</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
-                    <div class="post-preview">
-    <a href="/tags/生活-Free-talk/">
-        <h1 class="post-title archive">
-            生活-Free talk
-        </h1>
-    </a>
-</div>
-                
-                    <div class="post-preview">
-    <a href="/tags/Latex使用/">
-        <h1 class="post-title archive">
-            Latex使用
-        </h1>
-    </a>
-</div>
-                
-                    <div class="post-preview">
-    <a href="/tags/Paper-reading/">
-        <h1 class="post-title archive">
-            Paper-reading
-        </h1>
-    </a>
-</div>
-                
-                <div class="archive-before-pagination"></div>
+                <div class="post-heading">
+                    <h1>some tips when using Latex</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-04
+                        
+                    </span>
+                </div>
             </div>
         </div>
     </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
 
 
+<a href="/tags/Latex使用/">#Latex使用</a>
 
 
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
 
+<a href="/categories/Latex使用/">Latex使用</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="一些很碎的问题"><a href="#一些很碎的问题" class="headerlink" title="一些很碎的问题"></a>一些很碎的问题</h1><p><strong>1.</strong> 插入的表格或者是图片总是 <strong>“乱跑”</strong> ，找到代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[htbp]</span><br></pre></td></tr></table></figure>
+<p>把这个 <strong>[htbp]</strong> 换成[H]即可。<br><strong>2.</strong> 表格不会绘制，使用 <strong>Excel2LaTex</strong> 插件即可一步生成表格代码，还可以在Excel里面修改你想要的格式，比如说加框线，添加颜色等等。强烈安利。下载地址<a target="_blank" rel="noopener" href="https://ctan.org/tex-archive/support/excel2latex/">link</a>。<br><strong>3.</strong> 想要引用图片或者表格时，不用自己苦命敲figure××，因为再添加图片后图片标注都会改变。正确操作是使用label和ref。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure*&#125;[H] </span><br><span class="line">...</span><br><span class="line">\label&#123;img1&#125; %给图片起个名字</span><br><span class="line">\end&#123;figure*&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">This</span> is figure \ref &#123;img1&#125;%当你需要调用时引用，用自己起的名字</span><br></pre></td></tr></table></figure>
+<p><strong>4.</strong> 如果需要写summary啥的，发现第一页装不下，可以试试把整个summary放到</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;abstract&#125;</span><br></pre></td></tr></table></figure>
+<p>里面试一下，行间距会变小。<br><strong>5.</strong> 遇到一些居中问题试试<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\centering</span><br></pre></td></tr></table></figure><br><strong>6.</strong> 插入图片找不到的时候，找到自己安装的CTex的地址，举个例子，如果用CTex一套里面的win进行排版，就把要插入的图片复制到win目录下。图片命名不要加 <strong>“.”</strong> 。<br><strong>7.</strong> 给图片加标题:<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\caption&#123;××&#125;</span><br></pre></td></tr></table></figure><br><strong>8.</strong> LATEX公式下标短横线过长</p>
+<p>我其实也不太知道为什么，但是我想应该可以定义破折号的长度，所以我百度了定义破折号长度的方法。然后将raisebox改为零，得到：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$G_&#123;s\raisebox&#123;0mm&#125;&#123;-&#125;t&#125;$</span><br></pre></td></tr></table></figure>
+
+<p><strong>9.</strong> 创建独立同分布矩阵</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x_&#123;ij&#125;\stackrel&#123;i.i.d&#125;&#123;\sim&#125;\begin&#123;pmatrix&#125; 1&amp; 2 \\ 0.4 &amp; 0.6 \end&#123;pmatrix&#125;$</span><br></pre></td></tr></table></figure>
+<p><strong>10.</strong> 使用latex公式编号自定义X-X-X形式</p>
+<p>在usepackage部分后面插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\renewcommand\theequation&#123;\arabic&#123;section&#125;-\arabic&#123;subsection&#125;-\arabic&#123;equation&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
 
     <!-- Footer -->
     <hr />
